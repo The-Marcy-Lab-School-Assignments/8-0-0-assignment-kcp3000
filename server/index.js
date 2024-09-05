@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job! */
 const express = require('express');
 const app = express()
 
@@ -17,7 +18,7 @@ const serveSins = (req, res, next) => {
   const data = [{ sin: 'Wrath' }, { sin: 'Envy' }, { sin: 'Lust' }, { sin: 'Sloth' }, { sin: 'Greed' }, { sin: 'Pride' }, { sin: 'Gluttony' }];
   res.send(data);
 }
-
+/** FEEDBACK: In the future, remember that express reads endpoints in order and that we typically will go from less specific to more. */
 app.get('/sleepy', serveSleep)
 app.get('/', serveJudge)
 app.get('/api/color', serveColor);
